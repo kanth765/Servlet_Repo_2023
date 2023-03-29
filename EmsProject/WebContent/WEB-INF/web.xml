@@ -8,13 +8,23 @@
 		<welcome-file>index.html</welcome-file>
 	</welcome-file-list>
 	<servlet>
-    <description></description>
-    <display-name>SaveController</display-name>
-    <servlet-name>SaveController</servlet-name>
-    <servlet-class>com.ciq.rms.controller.EmployeeSaveController</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>SaveController</servlet-name>
-    <url-pattern>/save</url-pattern>
-  </servlet-mapping>
+		<description></description>
+		<display-name>SaveController</display-name>
+		<servlet-name>SaveController</servlet-name>
+		<servlet-class>com.ciq.rms.controller.EmployeeSaveController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SaveController</servlet-name>
+		<url-pattern>/save</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>FindAllController</display-name>
+		<servlet-name>FindAllController</servlet-name>
+		<servlet-class>com.ciq.rms.controller.EmployeeFindAllController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FindAllController</servlet-name>
+		<url-pattern>/findAll</url-pattern>
+	</servlet-mapping>
 </web-app>
