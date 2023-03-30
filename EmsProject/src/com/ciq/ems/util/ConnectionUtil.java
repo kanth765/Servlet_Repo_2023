@@ -3,6 +3,8 @@ package com.ciq.ems.util;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Properties;
 
@@ -31,8 +33,48 @@ public class ConnectionUtil {
 
 	}
 
+	public static void closeConnection(Connection connection) {
+
+		if (connection != null) {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+
+	}
+
 	public static void main(String[] args) {
 		System.out.println(getConnection());
+	}
+
+	public static void close(ResultSet resultSet, PreparedStatement preparedStatement, Connection connection) {
+		if (resultSet != null) {
+
+			try {
+				resultSet.close();
+				preparedStatement.close();
+				closeConnection(connection);
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+
+	}
+
+	public static void close(PreparedStatement preparedStatement, Connection connection) {
+		if (preparedStatement != null) {
+			try {
+				preparedStatement.close();
+				closeConnection(connection);
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+
 	}
 
 }
