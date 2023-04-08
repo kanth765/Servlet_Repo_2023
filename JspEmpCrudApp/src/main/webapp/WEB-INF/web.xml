@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:web="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	<servlet>
+		<servlet-name>EmployeeFindAllController</servlet-name>
+		<servlet-class>com.ciq.ems.controller.EmployeeFindAllController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EmployeeFindAllController</servlet-name>
+		<url-pattern>/findAll</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>EmployeeSaveController</display-name>
+		<servlet-name>EmployeeSaveController</servlet-name>
+		<servlet-class>com.ciq.ems.controller.EmployeeSaveController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EmployeeSaveController</servlet-name>
+		<url-pattern>/save</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description></description>
+		<display-name>EmployeeDeleteController</display-name>
+		<servlet-name>EmployeeDeleteController</servlet-name>
+		<servlet-class>com.ciq.ems.controller.EmployeeDeleteController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EmployeeDeleteController</servlet-name>
+		<url-pattern>/delete</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description></description>
+		<display-name>EmployeeUpdateController</display-name>
+		<servlet-name>EmployeeUpdateController</servlet-name>
+		<servlet-class>com.ciq.ems.controller.EmployeeUpdateController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EmployeeUpdateController</servlet-name>
+		<url-pattern>/update</url-pattern>
+	</servlet-mapping>
+</web-app>
