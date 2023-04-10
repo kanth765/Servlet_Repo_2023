@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<servlet>
+		<servlet-name>ImplicitObjectsDemo</servlet-name>
+		<servlet-class>com.ciq.controller.ImplicitObjectsDemo</servlet-class>
+		<init-param>
+			<param-name>user</param-name>
+			<param-value>ciq</param-value>
+		</init-param>
+	</servlet>
+	<servlet>
+		<servlet-name>EMpController</servlet-name>
+		<servlet-class>com.ciq.controller.EMpController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ImplicitObjectsDemo</servlet-name>
+		<url-pattern>/implicit</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>EMpController</servlet-name>
+		<url-pattern>/getEmp</url-pattern>
+	</servlet-mapping>
+	<context-param>
+		<param-name>applicationScope</param-name>
+		<param-value>contextObject</param-value>
+	</context-param>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/Error404.jsp</location>
+	</error-page>
+</web-app>
