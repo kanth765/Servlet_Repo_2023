@@ -9,7 +9,7 @@
 </head>
 <body>
 	<h1>update emp</h1>
-
+<%@ include file="home.jsp" %>
 	<form action="update" method="post">
 
 
@@ -39,5 +39,6 @@
 		</table>
 
 	</form>
+	<%@ include file="footer.jsp" %>
 </body>
 </html>

@@ -8,5 +8,7 @@
 </head>
 <body>
 <a href="findAll">Get All Emps</a>
+
+<%-- <jsp:forward page="findAll" /> --%>
 </body>
 </html>

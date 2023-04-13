@@ -38,7 +38,8 @@
 </style>
 </head>
 <body>
-
+<%@ include file="home.jsp" %>
+<%@ include file="file.txt" %>
 	<h1>Employe Information</h1>
 
 	<h3>
@@ -74,6 +75,6 @@
 
 	</table>
 
-
+<%@ include file="footer.jsp" %>
 </body>
 </html>
